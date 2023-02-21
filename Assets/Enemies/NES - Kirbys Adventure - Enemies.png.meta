@@ -406,6 +406,71 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: WaddleDooBlink
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: -8}
+        - {x: 4, y: -7}
+        - {x: -3, y: -7}
+        - {x: -3, y: -8}
+        - {x: -6, y: -8}
+        - {x: -6, y: -7}
+        - {x: -7, y: -7}
+        - {x: -7, y: -6}
+        - {x: -8, y: -6}
+        - {x: -8, y: -4}
+        - {x: -7, y: -4}
+        - {x: -7, y: -3}
+        - {x: -6, y: -3}
+        - {x: -6, y: -2}
+        - {x: -7, y: -2}
+        - {x: -7, y: -1}
+        - {x: -8, y: -1}
+        - {x: -8, y: 3}
+        - {x: -7, y: 3}
+        - {x: -7, y: 5}
+        - {x: -6, y: 5}
+        - {x: -6, y: 6}
+        - {x: -7, y: 6}
+        - {x: -7, y: 8}
+        - {x: -4, y: 8}
+        - {x: -4, y: 7}
+        - {x: -3, y: 7}
+        - {x: -3, y: 8}
+        - {x: 2, y: 8}
+        - {x: 2, y: 7}
+        - {x: 4, y: 7}
+        - {x: 4, y: 6}
+        - {x: 5, y: 6}
+        - {x: 5, y: 5}
+        - {x: 7, y: 5}
+        - {x: 7, y: 4}
+        - {x: 8, y: 4}
+        - {x: 8, y: 0}
+        - {x: 7, y: 0}
+        - {x: 7, y: -4}
+        - {x: 8, y: -4}
+        - {x: 8, y: -7}
+        - {x: 7, y: -7}
+        - {x: 7, y: -8}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f08f234e92528040b3ed620624abb27
+      internalID: 1056332391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -421,6 +486,7 @@ TextureImporter:
       Gordo2: -790424241
       WaddleDoo: -1930403779
       WaddleDoo2: -1226142197
+      WaddleDooBlink: 1056332391
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

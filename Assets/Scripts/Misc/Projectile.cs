@@ -24,13 +24,18 @@ public class Projectile : MonoBehaviour
     {
 
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTrigger2D(Collision2D collision)
     {
-        if /*(other.gameObject.CompareTag("Powerup") ||*/ (other.gameObject.CompareTag("Player")/*|| other.gameObject.CompareTag("Collectible")*/)
+        if /*(other.gameObject.CompareTag("Powerup") ||*/ (collision.gameObject.CompareTag("Player")/*|| other.gameObject.CompareTag("Collectible")*/)
         {
             //Do nothing
         }
         else
             Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
+            Destroy(gameObject);
+        }
     }
 }
