@@ -23,7 +23,6 @@ public class Shoot : MonoBehaviour
             Debug.Log("Please setup default values on " + gameObject.name);
     }
 
-    // Update is called once per frame
     public void Fire()
     {
         if (!sr.flipX)

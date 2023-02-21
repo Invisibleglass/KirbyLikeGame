@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Collectibles : MonoBehaviour
 {
+    public enum Collectibletype
+    {
+        wisp = 0,
+        beam = 1,
+    }
+
+    public Collectibletype currentPickup;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +23,19 @@ public class Collectibles : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
+            switch (currentPickup)
+            {
+                case Collectibletype.beam:
+                    //collision.gameObject.GetComponent<Animator>.setBool("AllowBeamAttack", true);
+                    break;
+                case Collectibletype.wisp:
+
+                    break;
+            }
             Destroy(gameObject);
         }
     }

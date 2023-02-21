@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
             {
                 anim.SetTrigger("AirAttack");
             }
-            else if (curPlayingClip[0].clip.name == "AirAttack")
+            else if (curPlayingClip[0].clip.name == "AirAttack" )
             {
                 rb.velocity = Vector2.zero;
             }
@@ -122,11 +122,15 @@ public class PlayerController : MonoBehaviour
             jumpcount = 0;
         }
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.CompareTag("PlayerKiller"))
+        if (collision.gameObject.CompareTag("PlayerKiller"))
         {
             Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("beam"))
+        {
+            anim.SetBool("AllowBeamAttack", true);
         }
     }
     /*public void IncreaseGravity()
