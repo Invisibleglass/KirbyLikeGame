@@ -35,6 +35,7 @@ public class Shoot : MonoBehaviour
         {
             Projectile curProjectile = Instantiate(projectilePrefab, spawnPointLeft.position, spawnPointLeft.rotation);
             curProjectile.speed = -projectileSpeed;
+            curProjectile.GetComponent<SpriteRenderer>().flipX = true;
         }
     }
 }

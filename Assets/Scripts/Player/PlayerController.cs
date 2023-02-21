@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask isGroundLayer;
     public float groundCheckRadius;
 
+    private int jumpcount;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -94,8 +96,18 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * jumpForce);
+            jumpcount++;
         }
-
+        else if (Input.GetButtonDown("Jump"))
+        {
+            if (jumpcount <= 3)
+            {
+                jumpcount++;
+                rb.velocity = Vector2.zero;
+                rb.AddForce(Vector2.up * jumpForce);
+            }
+            
+        }
 
         anim.SetFloat("hInput", Mathf.Abs(hInput));
         anim.SetBool("isGrounded", isGrounded);
@@ -105,7 +117,10 @@ public class PlayerController : MonoBehaviour
             sr.flipX = (hInput < 0);
 
         if (isGrounded)
+        {
             rb.gravityScale = 1;
+            jumpcount = 0;
+        }
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
