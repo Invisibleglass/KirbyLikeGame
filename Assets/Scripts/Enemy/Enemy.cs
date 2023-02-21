@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
 
     public virtual void Death()
     {
-        anim.SetTrigger("Death");
+        anim.SetTrigger("hit");
     }
     // Start is called before the first frame update
     public virtual void Start()

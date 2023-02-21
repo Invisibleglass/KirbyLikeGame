@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
 {
+    
     public float lifetime;
 
     [HideInInspector]
@@ -17,6 +18,11 @@ public class Projectile : MonoBehaviour
 
         GetComponent<Rigidbody2D>().velocity = new Vector2(speed, 0);
         Destroy(gameObject, lifetime);
+
+        /*if (speed < 0)
+        {
+            SpriteRenderer.(flipX);
+        }*/
     }
 
     // Update is called once per frame

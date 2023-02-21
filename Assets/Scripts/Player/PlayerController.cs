@@ -74,14 +74,14 @@ public class PlayerController : MonoBehaviour
             {
                 rb.velocity = Vector2.zero;
             }
-            /*else if (Input.GetButtonDown("Fire2") && curPlayingClip[0].clip.name != "BeamAttack")
+            else if (Input.GetButtonDown("Fire2") && curPlayingClip[0].clip.name != "BeamAttack")
             {
                 anim.SetTrigger("BeamAttack");
             }
             else if (curPlayingClip[0].clip.name == "BeamAttack")
             {
                 rb.velocity = Vector2.zero;
-            }*/
+            }
             else
             {
                 Vector2 moveDirection = new Vector2(hInput * speed, rb.velocity.y);
