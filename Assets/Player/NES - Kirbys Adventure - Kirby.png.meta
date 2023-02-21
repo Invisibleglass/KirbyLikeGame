@@ -1184,6 +1184,346 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: BeamPower-Up
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2542
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.5, y: -8}
+        - {x: -2.5, y: -8}
+        - {x: -2.5, y: -7}
+        - {x: -3.5, y: -7}
+        - {x: -3.5, y: -8}
+        - {x: -8.5, y: -8}
+        - {x: -8.5, y: -7}
+        - {x: -9.5, y: -7}
+        - {x: -9.5, y: -6}
+        - {x: -8.5, y: -6}
+        - {x: -8.5, y: -5}
+        - {x: -7.5, y: -5}
+        - {x: -7.5, y: -4}
+        - {x: -6.5, y: -4}
+        - {x: -6.5, y: -3}
+        - {x: -7.5, y: -3}
+        - {x: -7.5, y: 2}
+        - {x: -8.5, y: 2}
+        - {x: -8.5, y: 5}
+        - {x: -7.5, y: 5}
+        - {x: -7.5, y: 6}
+        - {x: -3.5, y: 6}
+        - {x: -3.5, y: 5}
+        - {x: -2.5, y: 5}
+        - {x: -2.5, y: 6}
+        - {x: 2.5, y: 6}
+        - {x: 2.5, y: 5}
+        - {x: 4.5, y: 5}
+        - {x: 4.5, y: 4}
+        - {x: 5.5, y: 4}
+        - {x: 5.5, y: 3}
+        - {x: 6.5, y: 3}
+        - {x: 6.5, y: 2}
+        - {x: 7.5, y: 2}
+        - {x: 7.5, y: 1}
+        - {x: 8.5, y: 1}
+        - {x: 8.5, y: 0}
+        - {x: 9.5, y: 0}
+        - {x: 9.5, y: -2}
+        - {x: 8.5, y: -2}
+        - {x: 8.5, y: -3}
+        - {x: 7.5, y: -3}
+        - {x: 7.5, y: -4}
+        - {x: 6.5, y: -4}
+        - {x: 6.5, y: -5}
+        - {x: 7.5, y: -5}
+        - {x: 7.5, y: -6}
+        - {x: 8.5, y: -6}
+        - {x: 8.5, y: -7}
+        - {x: 7.5, y: -7}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4c5fcbed6ebd849b666eb3be0c8679
+      internalID: -948591067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeamPower-Up2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 2542
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.5, y: -8}
+        - {x: -2.5, y: -8}
+        - {x: -2.5, y: -7}
+        - {x: -3.5, y: -7}
+        - {x: -3.5, y: -8}
+        - {x: -8.5, y: -8}
+        - {x: -8.5, y: -7}
+        - {x: -9.5, y: -7}
+        - {x: -9.5, y: -6}
+        - {x: -8.5, y: -6}
+        - {x: -8.5, y: -5}
+        - {x: -7.5, y: -5}
+        - {x: -7.5, y: -4}
+        - {x: -6.5, y: -4}
+        - {x: -6.5, y: -3}
+        - {x: -7.5, y: -3}
+        - {x: -7.5, y: 2}
+        - {x: -8.5, y: 2}
+        - {x: -8.5, y: 5}
+        - {x: -7.5, y: 5}
+        - {x: -7.5, y: 6}
+        - {x: -3.5, y: 6}
+        - {x: -3.5, y: 5}
+        - {x: -2.5, y: 5}
+        - {x: -2.5, y: 6}
+        - {x: 2.5, y: 6}
+        - {x: 2.5, y: 5}
+        - {x: 4.5, y: 5}
+        - {x: 4.5, y: 4}
+        - {x: 5.5, y: 4}
+        - {x: 5.5, y: 3}
+        - {x: 6.5, y: 3}
+        - {x: 6.5, y: 2}
+        - {x: 7.5, y: 2}
+        - {x: 7.5, y: 1}
+        - {x: 8.5, y: 1}
+        - {x: 8.5, y: 0}
+        - {x: 9.5, y: 0}
+        - {x: 9.5, y: -2}
+        - {x: 8.5, y: -2}
+        - {x: 8.5, y: -3}
+        - {x: 7.5, y: -3}
+        - {x: 7.5, y: -4}
+        - {x: 6.5, y: -4}
+        - {x: 6.5, y: -5}
+        - {x: 7.5, y: -5}
+        - {x: 7.5, y: -6}
+        - {x: 8.5, y: -6}
+        - {x: 8.5, y: -7}
+        - {x: 7.5, y: -7}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4082241fdebd68046b20c074edc2d965
+      internalID: 1110129353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeamProjectile
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 2542
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: 4}
+        - {x: 2, y: 3}
+        - {x: -3, y: 3}
+        - {x: -3, y: 4}
+        - {x: -4, y: 4}
+        - {x: -4, y: 3}
+        - {x: -3, y: 3}
+        - {x: -3, y: -2}
+        - {x: -4, y: -2}
+        - {x: -4, y: -4}
+        - {x: -2, y: -4}
+        - {x: -2, y: -3}
+        - {x: 3, y: -3}
+        - {x: 3, y: -4}
+        - {x: 4, y: -4}
+        - {x: 4, y: -3}
+        - {x: 3, y: -3}
+        - {x: 3, y: 2}
+        - {x: 4, y: 2}
+        - {x: 4, y: 4}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb914a5915180545baa794fd42073e9
+      internalID: -1186586305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wisp
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 2503
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: -4}
+        - {x: 2, y: -6}
+        - {x: 1, y: -6}
+        - {x: 1, y: -8}
+        - {x: 0, y: -8}
+        - {x: 0, y: -6}
+        - {x: -1, y: -6}
+        - {x: -1, y: -4}
+        - {x: -2, y: -4}
+        - {x: -2, y: -5}
+        - {x: -3, y: -5}
+        - {x: -3, y: -4}
+        - {x: -4, y: -4}
+        - {x: -4, y: 3}
+        - {x: -1, y: 3}
+        - {x: -1, y: 6}
+        - {x: 0, y: 6}
+        - {x: 0, y: 7}
+        - {x: 1, y: 7}
+        - {x: 1, y: 6}
+        - {x: 2, y: 6}
+        - {x: 2, y: 3}
+        - {x: 4, y: 3}
+        - {x: 4, y: -4}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662d1d99f42a9704ebb71fa7def26185
+      internalID: -1963474470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wisp1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 2466
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: -6.5}
+        - {x: -3, y: -5.5}
+        - {x: -4, y: -5.5}
+        - {x: -4, y: -3.5}
+        - {x: -3, y: -3.5}
+        - {x: -3, y: -2.5}
+        - {x: -4, y: -2.5}
+        - {x: -4, y: 2.5}
+        - {x: -3, y: 2.5}
+        - {x: -3, y: 3.5}
+        - {x: -2, y: 3.5}
+        - {x: -2, y: 5.5}
+        - {x: -3, y: 5.5}
+        - {x: -3, y: 6.5}
+        - {x: -2, y: 6.5}
+        - {x: -2, y: 5.5}
+        - {x: 0, y: 5.5}
+        - {x: 0, y: 4.5}
+        - {x: 2, y: 4.5}
+        - {x: 2, y: 3.5}
+        - {x: 3, y: 3.5}
+        - {x: 3, y: 2.5}
+        - {x: 4, y: 2.5}
+        - {x: 4, y: -3.5}
+        - {x: 3, y: -3.5}
+        - {x: 3, y: -4.5}
+        - {x: 1, y: -4.5}
+        - {x: 1, y: -5.5}
+        - {x: -1, y: -5.5}
+        - {x: -1, y: -6.5}
+      - - {x: 0, y: 2.5}
+        - {x: 0, y: 3.5}
+        - {x: 1, y: 3.5}
+        - {x: 1, y: 2.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c62f708d34d2e654281ed5cf41ff8072
+      internalID: -272942871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wisp2
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 2506
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -0.5, y: -6.5}
+        - {x: -0.5, y: -1.5}
+        - {x: -1.5, y: -1.5}
+        - {x: -1.5, y: -2.5}
+        - {x: -2.5, y: -2.5}
+        - {x: -2.5, y: -1.5}
+        - {x: -1.5, y: -1.5}
+        - {x: -1.5, y: -0.5}
+        - {x: -3.5, y: -0.5}
+        - {x: -3.5, y: 0.5}
+        - {x: -1.5, y: 0.5}
+        - {x: -1.5, y: 1.5}
+        - {x: -2.5, y: 1.5}
+        - {x: -2.5, y: 2.5}
+        - {x: -1.5, y: 2.5}
+        - {x: -1.5, y: 1.5}
+        - {x: -0.5, y: 1.5}
+        - {x: -0.5, y: 6.5}
+        - {x: 0.5, y: 6.5}
+        - {x: 0.5, y: 1.5}
+        - {x: 1.5, y: 1.5}
+        - {x: 1.5, y: 2.5}
+        - {x: 2.5, y: 2.5}
+        - {x: 2.5, y: 1.5}
+        - {x: 1.5, y: 1.5}
+        - {x: 1.5, y: 0.5}
+        - {x: 3.5, y: 0.5}
+        - {x: 3.5, y: -0.5}
+        - {x: 1.5, y: -0.5}
+        - {x: 1.5, y: -1.5}
+        - {x: 2.5, y: -1.5}
+        - {x: 2.5, y: -2.5}
+        - {x: 1.5, y: -2.5}
+        - {x: 1.5, y: -1.5}
+        - {x: 0.5, y: -1.5}
+        - {x: 0.5, y: -6.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8bb2fc467d91f43a89345cd5d1001d
+      internalID: 1523680835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1196,6 +1536,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       AirProjectile: 899370271
+      BeamPower-Up: -948591067
+      BeamPower-Up2: 1110129353
+      BeamProjectile: -1186586305
       Float1: 580177224
       Float2: 1960369308
       Idle: 1001572150
@@ -1210,6 +1553,9 @@ TextureImporter:
       Walk2: 1269012177
       Walk3: -1048852167
       Walk4: 411814228
+      Wisp: -1963474470
+      Wisp1: -272942871
+      Wisp2: 1523680835
       jump4: 1978321492
   spritePackingTag: 
   pSDRemoveMatte: 0

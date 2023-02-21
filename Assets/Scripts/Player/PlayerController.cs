@@ -99,6 +99,13 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
             rb.gravityScale = 1;
     }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("PlayerKiller"))
+        {
+            Destroy(gameObject);
+        }
+    }
     /*public void IncreaseGravity()
     {
         rb.gravityScale = 5;
