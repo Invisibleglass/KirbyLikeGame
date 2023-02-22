@@ -18,7 +18,7 @@ public class Swingbeam : MonoBehaviour
             Debug.Log("Please setup default values on " + gameObject.name);
     }
 
-    public void Fire()
+    /*public void Fire()
     {
         if (!sr.flipX)
         {
@@ -29,5 +29,5 @@ public class Swingbeam : MonoBehaviour
             Beam curProjectile = Instantiate(beamPrefab, spawnPointLeft.position, spawnPointLeft.rotation);
             curProjectile.GetComponent<SpriteRenderer>().flipX = true;
         }
-    }
+    }*/
 }
