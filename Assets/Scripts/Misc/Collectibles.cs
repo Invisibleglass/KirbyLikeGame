@@ -30,7 +30,6 @@ public class Collectibles : MonoBehaviour
             switch (currentPickup)
             {
                 case Collectibletype.beam:
-                    //collision.gameObject.GetComponent<Animator>.setBool("AllowBeamAttack", true);
                     break;
                 case Collectibletype.wisp:
 

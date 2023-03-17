@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetButtonDown("Jump"))
         {
-            if (jumpcount <= 3)
+            if (jumpcount <= 1)
             {
                 jumpcount++;
                 rb.velocity = Vector2.zero;
@@ -124,15 +124,17 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("PlayerKiller"))
+        if (collision.gameObject.CompareTag("PlayerKiller")|| collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            GameManager.instance.lives--;
         }
         if (collision.gameObject.CompareTag("beam"))
         {
             anim.SetBool("AllowBeamAttack", true);
         }
     }
+
+
     /*public void IncreaseGravity()
     {
         rb.gravityScale = 5;

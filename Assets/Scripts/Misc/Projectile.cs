@@ -26,14 +26,20 @@ public class Projectile : MonoBehaviour
     {
 
     }
-    private void OnTrigger2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if /*(other.gameObject.CompareTag("Powerup") ||*/ (collision.gameObject.CompareTag("Player")/*|| other.gameObject.CompareTag("Collectible")*/)
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
+        /*if (other.gameObject.CompareTag("Powerup") || (collision.gameObject.CompareTag("Player")|| other.gameObject.CompareTag("Collectible"))
         {
             //Do nothing
         }
         else
+        {
             Destroy(gameObject);
+        }*/
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<Enemy>().TakeDamage(1);

@@ -38,4 +38,8 @@ public class Swingbeam : MonoBehaviour
             beam.GetComponent<Animator>().Play("SwipeLeft");
         }
     }
+    public void StopSwing()
+    {
+        beam.SetActive(false);
+    }
 }

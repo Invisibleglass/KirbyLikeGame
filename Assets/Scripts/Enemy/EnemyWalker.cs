@@ -35,16 +35,24 @@ public class EnemyWalker : Enemy
                 rb.velocity = new Vector2(speed, rb.velocity.y);
             }
         }
+        if (curClips[0].clip.name == "Death")
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Barrier"))
-        sr.flipX = !sr.flipX;
+            sr.flipX = !sr.flipX;
+        if (collision.CompareTag("beam"))
+        {
+            Death();
+        }
     }
 
 
     public void DestroyMyself()
     {
-        Destroy(gameObject.transform.parent.gameObject.transform.parent.gameObject);
+        Destroy(gameObject.transform.parent.gameObject);
     }
 }
