@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     protected int _health;
     public int maxHealth;
 
+
     public int health
     {
         get => _health;

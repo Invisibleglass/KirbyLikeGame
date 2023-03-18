@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  enemyDeathSound: {fileID: 8300000, guid: 86162ada6ce9ba942bf96eecbfaf5305, type: 3}
   speed: 3
 --- !u!1 &1610783437406203743
 GameObject:

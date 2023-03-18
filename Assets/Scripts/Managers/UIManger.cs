@@ -34,6 +34,7 @@ public class UIManger : MonoBehaviour
     public Slider SFXVolSlider;
 
     public AudioClip pauseSound;
+    public AudioClip enemyHurtSound;
 
     // Start is called before the first frame update
     void StartGame()

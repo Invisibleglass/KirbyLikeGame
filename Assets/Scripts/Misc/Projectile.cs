@@ -5,14 +5,19 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
 {
-    
+    AudioSourceManager asm;
+
     public float lifetime;
+
+    public AudioClip enemyHurtSound;
 
     [HideInInspector]
     public float speed;
     // Start is called before the first frame update
     void Start()
     {
+        asm = GetComponent<AudioSourceManager>();
+
         if (lifetime <= 0)
             lifetime = 2.0f;
 
@@ -43,6 +48,7 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
+            GameManager.instance.playerInstance.GetComponent<AudioSourceManager>().PlayOneShot(enemyHurtSound, false);
             Destroy(gameObject);
         }
     }

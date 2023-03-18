@@ -5,14 +5,21 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyWalker : Enemy
 {
+    AudioSourceManager asm;
     Rigidbody2D rb;
+
+    public AudioClip enemyDeathSound;
+
     public float speed;
 
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
-        rb = GetComponent< Rigidbody2D > ();
+        {
+            rb = GetComponent<Rigidbody2D>();
+            asm = GetComponent<AudioSourceManager>();
+        }
 
         if (speed <= 0)
             speed = 1.5f;
@@ -47,6 +54,7 @@ public class EnemyWalker : Enemy
         if (collision.CompareTag("beam"))
         {
             Death();
+            GameManager.instance.playerInstance.GetComponent<AudioSourceManager>().PlayOneShot(enemyDeathSound, false);
         }
     }
 
