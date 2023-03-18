@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class UIManger : MonoBehaviour
 {
+    public AudioMixer audioMixer;
+
     [Header("Button")]
     public Button startButton;
     public Button settingButton;
@@ -22,11 +25,15 @@ public class UIManger : MonoBehaviour
     public GameObject pauseMenu;
 
     [Header("Text")]
-    public Text volSliderText;
+    public Text MusicVolSliderText;
+    public Text SFXVolSliderText;
     public Text livesText;
 
     [Header("Slider")]
-    public Slider volSlider;
+    public Slider MusicVolSlider;
+    public Slider SFXVolSlider;
+
+    public AudioClip pauseSound;
 
     // Start is called before the first frame update
     void StartGame()
@@ -59,8 +66,10 @@ public class UIManger : MonoBehaviour
         if (returnToGameButton)
             returnToGameButton.onClick.AddListener(ResumeGame);
 
-        if (volSlider)
-            volSlider.onValueChanged.AddListener(OnSliderValueChanged);
+        if (MusicVolSlider)
+            MusicVolSlider.onValueChanged.AddListener(OnSliderValueChanged);
+        if (SFXVolSlider)
+            SFXVolSlider.onValueChanged.AddListener(OnSliderValueChanged);
 
         if (livesText)
             GameManager.instance.onLifeValueChanged.AddListener(UpdateLifeText);
@@ -71,8 +80,20 @@ public class UIManger : MonoBehaviour
         mainMenu.SetActive(false);
         settingsMenu.SetActive(true);
 
-        if (volSlider && volSliderText)
-            volSliderText.text = volSlider.value.ToString();
+        if (MusicVolSlider && MusicVolSliderText)
+        {
+            float value;
+            audioMixer.GetFloat("MusicVol", out value);
+            MusicVolSlider.value = value + 80;
+            MusicVolSliderText.text = (value + 80).ToString();
+        }
+        if (SFXVolSlider && SFXVolSliderText)
+        {
+            float value;
+            audioMixer.GetFloat("SFXVol", out value);
+            SFXVolSlider.value = value + 80;
+            SFXVolSliderText.text = (value + 80).ToString();
+        }
     }
 
     void ShowMainMenu()
@@ -99,8 +120,16 @@ public class UIManger : MonoBehaviour
 
     void OnSliderValueChanged(float value)
     {
-        if (volSliderText)
-            volSliderText.text = value.ToString();
+        if (MusicVolSliderText)
+        {
+            MusicVolSliderText.text = value.ToString();
+            audioMixer.SetFloat("MusicVol", value - 80);
+        }
+        if (SFXVolSliderText)
+        {
+            SFXVolSliderText.text = value.ToString();
+            audioMixer.SetFloat("SFXVol", value - 80);
+        }
     }
 
     // Update is called once per frame
@@ -114,6 +143,7 @@ public class UIManger : MonoBehaviour
 
             if(pauseMenu.activeSelf)
             {
+                GameManager.instance.playerInstance.GetComponent<AudioSourceManager>().PlayOneShot(pauseSound, false);
                 Time.timeScale = 0;
             }
             else

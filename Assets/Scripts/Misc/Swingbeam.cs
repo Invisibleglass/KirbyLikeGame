@@ -5,11 +5,14 @@ using UnityEngine;
 public class Swingbeam : MonoBehaviour
 {
     SpriteRenderer sr;
+    AudioSourceManager asm;
 
     public GameObject beam;
     public Transform spawnPointRight;
     public Transform spawnPointLeft;
     public float lifetime;
+
+    public AudioClip beamSound;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +40,7 @@ public class Swingbeam : MonoBehaviour
             beam.SetActive(true);
             beam.GetComponent<Animator>().Play("SwipeLeft");
         }
+        GameManager.instance.playerInstance.GetComponent<AudioSourceManager>().PlayOneShot(beamSound, false);
     }
     public void StopSwing()
     {

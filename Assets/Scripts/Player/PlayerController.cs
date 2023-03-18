@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     SpriteRenderer sr;
+    AudioSourceManager asm;
 
     //movement var
     public float speed;
@@ -25,6 +26,11 @@ public class PlayerController : MonoBehaviour
     public LayerMask isGroundLayer;
     public float groundCheckRadius;
 
+    //soundclips
+    public AudioClip jumpSound;
+    public AudioClip hurtSound;
+
+    //amount of jumps
     private int jumpcount;
 
     // Start is called before the first frame update
@@ -33,6 +39,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        asm = GetComponent<AudioSourceManager>();
 
         if (speed <= 0)
         {
@@ -97,6 +104,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * jumpForce);
             jumpcount++;
+            asm.PlayOneShot(jumpSound, false);
         }
         else if (Input.GetButtonDown("Jump"))
         {
@@ -105,6 +113,7 @@ public class PlayerController : MonoBehaviour
                 jumpcount++;
                 rb.velocity = Vector2.zero;
                 rb.AddForce(Vector2.up * jumpForce);
+                asm.PlayOneShot(jumpSound, false);
             }
             
         }
@@ -127,6 +136,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerKiller")|| collision.gameObject.CompareTag("Enemy"))
         {
             GameManager.instance.lives--;
+            asm.PlayOneShot(hurtSound, false);
         }
         if (collision.gameObject.CompareTag("beam"))
         {

@@ -6,16 +6,20 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     SpriteRenderer sr;
+    AudioSourceManager asm;
 
     public float projectileSpeed;
     public Transform spawnPointRight;
     public Transform spawnPointLeft;
 
     public Projectile projectilePrefab;
+
+    public AudioClip spitSound;
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        asm = GetComponent<AudioSourceManager>();
 
         if (projectileSpeed <= 0)
             projectileSpeed = 7.0f;
@@ -36,5 +40,8 @@ public class Shoot : MonoBehaviour
             curProjectile.speed = -projectileSpeed;
             curProjectile.GetComponent<SpriteRenderer>().flipX = true;
         }
+
+        if (asm)
+            asm.PlayOneShot(spitSound, false);
     }
 }

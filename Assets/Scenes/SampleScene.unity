@@ -1646,6 +1646,7 @@ GameObject:
   - component: {fileID: 526297328}
   - component: {fileID: 526297327}
   - component: {fileID: 526297326}
+  - component: {fileID: 526297331}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1665,6 +1666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d09476ff185d17438c6ac7728f42006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 0}
   startButton: {fileID: 0}
   settingButton: {fileID: 0}
   quitButton: {fileID: 109025293}
@@ -1675,9 +1677,12 @@ MonoBehaviour:
   mainMenu: {fileID: 0}
   settingsMenu: {fileID: 0}
   pauseMenu: {fileID: 674845990}
-  volSliderText: {fileID: 0}
+  MusicVolSliderText: {fileID: 0}
+  SFXVolSliderText: {fileID: 0}
   livesText: {fileID: 154488574}
-  volSlider: {fileID: 0}
+  MusicVolSlider: {fileID: 0}
+  SFXVolSlider: {fileID: 0}
+  pauseSound: {fileID: 8300000, guid: 1f1b8decaf482844ea90292976aaceae, type: 3}
 --- !u!114 &526297327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1761,6 +1766,102 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!82 &526297331
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526297325}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -9011703515456205815, guid: abb5e458b2742e543994c8995391329e, type: 2}
+  m_audioClip: {fileID: 8300000, guid: c9ccc36ec0fd37844a683b8514e3bf83, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &547132916
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,7 +2646,7 @@ GameObject:
   - component: {fileID: 1074344164}
   m_Layer: 3
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4495,6 +4596,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2289513758728639844, guid: 344fc979e6aec7c47a920c8ba1e717d5, type: 3}
+      propertyPath: powerupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 817eee7b45090674287fbd6f15df7623, type: 3}
     - target: {fileID: 2289513758728639844, guid: 344fc979e6aec7c47a920c8ba1e717d5, type: 3}
       propertyPath: currentPickup
       value: 1

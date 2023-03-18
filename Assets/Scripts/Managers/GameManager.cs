@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
             if (_lives <= 0)
                 SceneManager.LoadScene(2);
 
-            //? is = to invoke if null
             onLifeValueChanged?.Invoke(_lives);
 
             Debug.Log("Lives have been set to: " + _lives.ToString());

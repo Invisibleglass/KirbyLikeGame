@@ -11,6 +11,7 @@ public class Collectibles : MonoBehaviour
     }
 
     public Collectibletype currentPickup;
+    public AudioClip powerupSound;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,10 @@ public class Collectibles : MonoBehaviour
 
                     break;
             }
+
+            if (powerupSound)
+                collision.gameObject.GetComponent<AudioSourceManager>().PlayOneShot(powerupSound, false);
+
             Destroy(gameObject);
         }
     }
